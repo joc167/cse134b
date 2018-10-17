@@ -1,65 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.5.4/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.5.4/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.5.4/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.5.4/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.5.4/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+<head>
+	<header>
+	<title> Ugly Store</title>
+	<link rel="icon" href="assets_img_icon.png">
+	<base href="file:///C:/Users/Joeyi/Desktop/cse134b/index.html" target="_blank">
+	<meta name="index" content="homepage of the files">
+ <pre>
+_         _  ___________  _            _       _         _       ___________  ___________  ___________  ___________  ___________ 
+¦¦¦       ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦          ¦¦¦     ¦¦¦       ¦¦¦     ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+¦¦¦       ¦¦¦¦¦¦¯¯¯¯¯¯¯¯¯ ¦¦¦          ¦¦¦     ¦¦¦       ¦¦¦     ¦¦¦¯¯¯¯¯¯¯¯¯  ¯¯¯¯¦¦¦¯¯¯¯ ¦¦¦¯¯¯¯¯¯¯¦¦¦¦¦¦¯¯¯¯¯¯¯¦¦¦¦¦¦¯¯¯¯¯¯¯¯¯ 
+¦¦¦       ¦¦¦¦¦¦          ¦¦¦          ¦¦¦     ¦¦¦       ¦¦¦     ¦¦¦               ¦¦¦     ¦¦¦       ¦¦¦¦¦¦       ¦¦¦¦¦¦          
+¦¦¦       ¦¦¦¦¦¦ ________ ¦¦¦          ¦¦¦     ¦¦¦_______¦¦¦     ¦¦¦_________      ¦¦¦     ¦¦¦       ¦¦¦¦¦¦_______¦¦¦¦¦¦_________ 
+¦¦¦       ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦          ¦¦¦     ¦¦¦¦¦¦¦¦¦¦¦¦¦     ¦¦¦¦¦¦¦¦¦¦¦¦¦     ¦¦¦     ¦¦¦       ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+¦¦¦       ¦¦¦¦¦¦ ¯¯¯¯¯¯¦¦¦¦¦¦          ¦¦¦      ¯¯¯¯¦¦¦¯¯¯¯       ¯¯¯¯¯¯¯¯¯¦¦¦     ¦¦¦     ¦¦¦       ¦¦¦¦¦¦¯¯¯¯¦¦¦¯¯ ¦¦¦¯¯¯¯¯¯¯¯¯ 
+¦¦¦       ¦¦¦¦¦¦       ¦¦¦¦¦¦          ¦¦¦          ¦¦¦                    ¦¦¦     ¦¦¦     ¦¦¦       ¦¦¦¦¦¦     ¦¦¦  ¦¦¦          
+¦¦¦_______¦¦¦¦¦¦_______¦¦¦¦¦¦_________ ¦¦¦_________ ¦¦¦           _________¦¦¦     ¦¦¦     ¦¦¦_______¦¦¦¦¦¦      ¦¦¦ ¦¦¦_________ 
+¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦          ¦¦¦¦¦¦¦¦¦¦¦¦¦     ¦¦¦     ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦       ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+ ¯¯¯¯¯¯¯¯¯¯¯  ¯¯¯¯¯¯¯¯¯¯¯  ¯¯¯¯¯¯¯¯¯¯¯  ¯¯¯¯¯¯¯¯¯¯¯  ¯            ¯¯¯¯¯¯¯¯¯¯¯       ¯       ¯
+ </pre>
+	</header>
+  <nav>	
+	<img src="assets_img_nav.png" alt="index photo"  usemap="#ordermap">
+	<map name="planetmap">
+  	<area shape="rect" coords="0,0,82,126" alt="order" href="sun.htm">
+  	<area shape="rect" coords="90,58,3" alt="account info" href="mercur.htm">
+  	<area shape="rect" coords="124,58,8" alt="about us" href="venus.htm">
+	</map>
+  </nav>		
+</head>
+<body>
+ <main>
+  <style>
+    table, th, td {
+     border: 1px solid black;
+    }
+     th, td {
+    	padding: 1px;
+    	text-align: left;    
       }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </style>
+	
+  <table style="width:100%">
+	<caption> Product List </caption>
+	<div>
+	<thead>	
+  	<colgroup>
+    <col span="1" style="background-color:cyan">
+  </colgroup>
+	<tr>
+    	  <th>Product Name</th>
+    	  <th>Product Type</th> 
+    	  <th>Product Description</th>
+	  <th>Product Price</th>
+  	</tr>
+	</thead>
+	</tbody>
+  	<tr>
+    	  <td><u>CowBrick </u></td>
+    	  <td>Construction</td>
+    	  <td>Perfect Bricks for Path</td>
+	  <td>$50</td>
+        </tr>
+  	<tr>
+       	  <td><u>Kitchen Sink</u></td>
+    	  <td>Furniture</td>
+    	  <td>A Sink from the Wonderland</td>
+	  <td> $100 </td>
+  	</tr>
+	</tbody>
+	</div>
+	<tfoot>
+  	<tr>
+    	   <td colspan="4"><center><b>Mind Your Decision Or We Will Benefit From You</b></center></td>
+  	</tr>
+	</tfoot>
+	</table>
+<p> Advice for this Homework </p>
+	<ol> 
+		<li>Don't assume, ASK </li>
+		<li>Start Early </li> 
+		<li>Dont think it is an easy Homework </li>
+	</ol>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥
+<p> Did you know you can have codes and variables in html </p>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+<p> To increment a variable <i>count</i>, use count++ or count = count+1. </p>
+
+
+<p> If you have any questions about this homework, <code> please do not be afraid of using Slack and office
+ hour </code>
+</p>
+</main>
+<hr width="100%/">
+<p> When you haveaVeryVeryLooooooooooooooooooooooooongWord,sometimes youNeedaPlaceToBreakItWhenYou</p>
+<hr width="100%/">
+
+<dialog open>Be conservative in what you do, be liberal in what you accept from others -<i> Postel's laws</i></dialog>
+
+
+
+
+</body>
 </html>

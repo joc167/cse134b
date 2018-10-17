@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CheckOut </title>
+	<link rel="icon" href="assets_img_icon.png">
+	<h1> Order Details: Cow Bricks </h1>
+	<meta name="checkout" content="checkout page">
+<p> Current time: 2018-10-6 <time>12:54</time></p>
+<hr width="100%/">
+</head>
+<body>
+ <main>
+  <nav>
+   <ul>
+    <li> <a href="file:///C:/Users/Joeyi/Desktop/cse134b/index.html"> Home Page</a>   </li>
+    <li>   Search More Items: <input list="browsers" name="browser">
+    <datalist id="browsers">
+
+    </datalist>
+   <button type="button" onclick="alert('Hello world!')">search</button>  </li>
+    </ul>
+  </nav>
+<form>
+  <fieldset>
+    <legend><b><em>Payment Information:</em></b></legend>
+    <h2> Card: </h2>	
+      <ul>
+       <li>Card Holder: <input type="text"><br> </li>
+       <li>Card  Number: <input type="text"><br> </li>
+       <li>Expiration Date: <input type="text"> </li>
+       </ul>
+    <h2> Billing Address </h2>	
+      <address>
+       <ul>
+       <li>Phone Number: <input type="text"><br> </li>
+       <li>Address: <input type="text"><br> </li>
+       <li>City: <input type="text"><br> </li>
+       <li>State: <input type="text"><br> </li>
+       <li>zip: <input type="text"> </li> 
+       <li>Country: <input type="text"> </li> 
+      </address>
+    </ul>
+ </fieldset>
+</form>
+
+<form>
+  <fieldset>
+    <legend><b>Product Detail:</b></legend>
+	<h2> Product Picture </h2>
+<img src="assets_img_cow-brick.jpg" alt="Italian Trulli" width="300" height="310">
+
+<h2> Current Price: </h2>
+
+<b> $50 </b>
+
+<h2> Product Options: </h2>
+<ul>
+<li> <p> Quantity: </p>
+    <input type="range" name="quantity" min="0" max="100">
+</li>
+<li>
+Style:	
+ <select>
+  <optgroup label="Color">
+    <option value="Passion Red">Passion Red</option>
+  </optgroup>
+</select>
+</li>
+</ul>
+
+<h2> Shipping Options: </h2>
+ <label for="rate"></label>
+  <input type="radio" name="gender" id="male" value="male"> USPS Express(1-2 days delivery) </input>
+  <input type="radio" name="gender" id="male" value="male"> USPS Ground(5-7 days delivery) </input>
+  
+<h2> Shipping Address: </h2>
+<address>
+       <ul>
+       <li>Phone Number: <input type="text"><br> </li>
+       <li>Address: <input type="text"><br> </li>
+       <li>City: <input type="text"><br> </li>
+       <li>State: <input type="text"><br> </li>
+       <li>zip: <input type="text"> </li> 
+       <li> Country:<select><optgroup label="Country">
+    <option value="Country">--</option>
+  </optgroup>
+</select> </li> 
+      </address>
+    </ul>
+
+ </fieldset>
+
+</form>
+
+<button type="button">Checkout</button>
+<button type="button">Reset</button>
+</main>
+<footer>
+<h3> Goal </h3>
+  <blockquote><small> Sincerely Serving Our Customers</small></blockquote>
+<p>Copyright &copy;2018 <sub>UCSD</sub> .</p>
+
+<address> Adress: Triton Corporation </address>
+<mark><a href="#top"> All the way to the top </a> </mark>
+</footer>
+</body>
